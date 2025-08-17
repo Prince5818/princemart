@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prince Mart</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">Prince Mart</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#products-heading">Products</a></li> <li><a href="#about-us">About</a></li>
+                    <li><a href="#" id="cart-link">Cart<span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div id="cart" class="cart">
+                <div class="cart-header">
+                    <h2>Your Cart</h2>
+                    <button id="close-cart">&times;</button>
+                </div>
+                <div id="cart-items"></div>
+                <div class="cart-footer">
+                    <h3>Total: <span id="cart-total">₹0</span></h3>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="hero-section">
+            <h1>Welcome to Prince Mart</h1>
+            <h2>Discover amazing products at great prices</h2>
+            <button class="cta-button" onclick="scrollToProductsHeading()">Shop Now</button> 
+        </div>
+
+        <h1 class="products-heading" id="products-heading">Our Products</h1> 
+        
+        <div class="categories">
+            <button class="category-button active" data-category="all">All</button>
+            <button class="category-button" data-category="phones">Phones</button>
+            <button class="category-button" data-category="laptops">Laptops</button>
+            <button class="category-button" data-category="tablets">Tablets</button>
+        </div>
+
+        <div id="products" class="products-section">
+    
+            <div class="product-part" data-category="phones">
+                <img src="https://i.ibb.co/9HMV81sr/samsung-s24.jpg" alt="Samsung s24 Series">
+                <h2>Samsung s24 Series</h2>
+                <p>New samsung galaxy s24 A cutting-edge smartphone boasting integrated, with state-of-the-art AI capabilities for enhanced user experience and performance.</p>
+                <span class="price">₹52,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-part" data-category="phones">
+                <img src="https://i.ibb.co/0RHC3nNS/i-Phone-16.jpg" alt="Iphone 16 Series">
+                <h2>Iphone 16 Series</h2>
+                <p>This next-gen smartphone seamlessly integrates advanced AI features for unparalleled performance. Comes with advanced A18 chip with enhanced Apple Intelligence.</p>
+                <span class="price">₹69,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-part" data-category="phones">
+                <img src="https://i.ibb.co/fVwCFBKc/googl-pixel9.jpg" alt="Google Pixel 9 Series">
+                <h2>Google Pixel 9 Series</h2>
+                <p>The Google Pixel 9, powered by the new Tensor G4 chip, offers advanced AI features like Gemini integration for intelligent assistance, camera system with a 48MP ultrawide lens.</p>
+                <span class="price">₹64,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-part" data-category="laptops">
+                <img src="https://i.ibb.co/Kpm50RP4/Dell-alienware-x14.jpg" alt="Dell Alienware x14 R2">
+                <h2>Dell Alienware x14 R2</h2>
+                <p>DELL Alienware x14 R2 | i7- 13620H | 32GB LP DDR5 | 1TB SSD | Win 11 + Office H&S 2021 | NVIDIA.</p>
+                <span class="price">₹3,08,290</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-part" data-category="laptops">
+                <img src="https://i.ibb.co/8LwhS9Sq/macbook.jpg" alt="Apple MacBook Pro">
+                <h2>Apple MacBook Pro</h2>
+                <p>Apple 2019 MacBook Pro with 2.3GHz Intel Core i9 (16-inch, 32GB RAM, 1TB SSD) Space Gray. Light Laptop without Optical Disk Drive.</p>
+                <span class="price">₹2,15,990</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-part" data-category="laptops">
+                <img src="https://i.ibb.co/spLDwtQP/Microsoft-surface.jpg" alt="Microsoft Surface">
+                <h2>Microsoft Surface</h2>
+                <p>Microsoft Surface Laptop 4 with 13.5″ / 15″ PixelSense display, 11th Gen Intel Core / AMD Ryzen 4000 series processors.</p>
+                <span class="price">₹1,77,499</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-part" data-category="tablets">
+                <img src="https://i.ibb.co/KpCkNm5Q/Galaxy-Tab.jpg" alt="Galaxy Tab S10 Ultra">
+                <h2>Galaxy Tab S10 Ultra</h2>
+                <p>Samsung Galaxy Tab S10 Ultra [Smartchoice], S Pen in-Box, 36.99 cm (14.6 inch) Dynamic AMOLED 2X Display, 12 GB RAM, 256 GB Storage, Wi-Fi + 5G Tablet, Moonstone Gray.</p>
+                <span class="price">₹1,22,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-part" data-category="tablets">
+                <img src="https://i.ibb.co/HpTh7y4T/HUAWEI-Mate-Pad-Pro-13-2-1024x520.jpg" alt="HUAWEI MatePad Pro">
+                <h2>HUAWEI MatePad Pro</h2>
+                <p>HUAWEI MatePad Pro 13.2″ with 2.8K 144Hz OLED display, Octa-core Hisilicon Kirin 9000S (1 Core @ 2.62 GHz, 3 Cores @ 2.15 GHz & 4 Cores @ 1.53 GHz) with Maleoon 910 GPU.</p>
+                <span class="price">₹94,375</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+    
+            <div class="product-part" data-category="tablets">
+                <img src="https://i.ibb.co/JWZTxwFN/oneplus-pad-1.jpg" alt="OnePlus Pad 2">
+                <h2>OnePlus Pad 2</h2>
+                <p>OnePlus Pad 2 12 GB RAM 256 GB ROM 12.1 inch with Wi-Fi Only Tablet (Nimbus Gray) Android 13 | Battery: 9510 mAh Processor: Snapdragon 8 Gen 3.</p>
+                <span class="price">₹39,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-section" id="about-us">
+                <h3>About Us</h3>
+                <p>Prince Mart offers a wide variety of quality products at unbeatable prices.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Email</h3>
+                <p>support@princemart.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; Prince Mart | College Project</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
